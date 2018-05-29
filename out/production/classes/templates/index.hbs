@@ -1,38 +1,43 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CRUD Practica 2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-</head>
-<body>
-    <h1>CRUD de estudiantess</h1>
-    <!--TODO:nd Listar el contenido de la lista estatica de estudiantes-->
-    <table class="table-stripped">
-        <thead>
-            <tr>
-                <th scope="col">Matricula</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Telefono</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ matricula }}</td>
-                <td>{{ nombre }}</td>
-                <td>{{ apellido }}</td>
-                <td>{{ telefono }}</td>
-            </tr>
-        </tbody>
-    </table>
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+{{#partial "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1>Lista de estudiantes</h1>
 
-</body>
-</html>
+                <button type="button" class="btn btn-primary">Agregar estudiante</button>
+
+                <table class="table table-responsive table-stripped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each estudiantes}}
+                        <tr>
+                            <th scope="row">{{ matricula }}</th>
+                            <td>{{ nombre }}</td>
+                            <td>{{ apellido }}</td>
+                            <td>{{ telefono }}</td>
+                            <td><button type="button" class="btn">Edit</button>
+                            <button type="button" class="btn">Delete</button></td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col">
+                <br>
+                <p class="backnote">Aquí se muestran detalles del estudiante seleccionado</p>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> home.hbs}}

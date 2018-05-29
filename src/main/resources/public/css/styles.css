@@ -1,12 +1,6 @@
-.tabla {
-    background-color: gainsboro;
+.backnote {
+    color: white;
+    background-color: dodgerblue;
+    font-size: 24px;
+    text-shadow: 0 0 4px gainsboro;
 }
-
-.th {
-    color: blue;
-}
-
-.td {
-    color: red;
-}
-

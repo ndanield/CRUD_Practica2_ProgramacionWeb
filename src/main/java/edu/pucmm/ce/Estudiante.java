@@ -46,7 +46,4 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    public String ToString() {
-        return this.matricula + this.nombre + this.apellido + this.telefono;
-    }
 }
