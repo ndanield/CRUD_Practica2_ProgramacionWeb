@@ -1,6 +1,5 @@
 .backnote {
-    color: white;
-    background-color: dodgerblue;
+    font-family: "Microsoft Sans Serif";
     font-size: 24px;
     text-shadow: 0 0 4px gainsboro;
 }

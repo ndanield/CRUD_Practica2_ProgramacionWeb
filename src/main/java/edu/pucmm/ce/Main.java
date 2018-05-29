@@ -19,7 +19,7 @@ public class Main {
 
         estudiantes.add(new Estudiante(20132013, "Daniel", "Pichardo", "809-621-2328"));
         estudiantes.add(new Estudiante(20122013, "Pedro", "Caceres", "809-641-2428"));
-        estudiantes.add(new Estudiante(20170523, "Marchielys", "Korrea", "829-621-2425));
+        estudiantes.add(new Estudiante(20170523, "Marchielys", "Korrea", "829-621-2425"));
 
         get("/", (req, res) -> {
             Map<String, ArrayList> model = new HashMap<>();
