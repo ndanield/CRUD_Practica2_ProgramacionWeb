@@ -5,24 +5,37 @@
 
     <hr>
 
-    <p>Matricula: {{ estudiante.matricula }}</p>
-    <p>Nombres: {{ estudiante.nombre }}</p>
-    <p>Apellidos: {{ estudiante.apellido}}</p>
-    <p>Teléfono: {{ estudiante.telefono }}
+    <!--<p>Matricula: {{ estudiante.matricula }}</p>-->
+    <!--<p>Nombres: {{ estudiante.nombre }}</p>-->
+    <!--<p>Apellidos: {{ estudiante.apellido}}</p>-->
+    <!--<p>Teléfono: {{ estudiante.telefono }}-->
+
+    <div class="row">
+        <div class="col">
+            <p>Matricula:</p>
+            <p>Nombres:</p>
+            <p>Apellidos:</p>
+            <p>Teléfonos</p>
+        </div>
+        <div class="col">
+            <p>{{ estudiante.matricula }}</p>
+            <p>{{ estudiante.nombre }}</p>
+            <p>{{ estudiante.apellido }}</p>
+            <p>{{ estudiante.telefono }}</p>
+        </div>
+    </div>
 
     <hr>
 
     <div class="row">
         <form class="px-3" action="/edit/{{ estudiante.matricula }}" method="get">
-            <button type="button" class="btn"><i class="far fa-edit"></i> Edit</button>
+            <button type="submit" class="btn"><i class="far fa-edit"></i> Editar</button>
         </form>
 
-        <form class="px-3" action="/detele/{{ estudiante.matricula }}" method="post">
-            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+        <form class="px-3" action="/delete/{{ estudiante.matricula }}" method="post">
+            <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Eliminar</button>
         </form>
     </div>
-
-
 {{/partial}}
 
 {{> home.hbs }}

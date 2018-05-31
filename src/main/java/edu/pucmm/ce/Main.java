@@ -27,8 +27,7 @@ public class Main {
         }, new HandlebarsTemplateEngine());
 
 
-        get("/create", (req, res) -> new ModelAndView(null, "create.hbs"),
-                new HandlebarsTemplateEngine());
+        get("/create", (req, res) -> new ModelAndView(null, "create.hbs"));
 
         post("/create", (req, res) -> {
             estudiantes.add(new Estudiante(Integer.parseInt(req.queryParams("matricula")),
@@ -48,16 +47,34 @@ public class Main {
 
         get("/edit/:matricula", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
+            model.put("estudiante", getPorMatricula(req.params("matricula")));
 
-            model.put("estudiante", req.params("matricula"));
             return new ModelAndView(model, "edit.hbs");
         }, new HandlebarsTemplateEngine());
+
+        post("/update", (req, res) -> {
+            setPorMatricula(req.queryParams("matricula"),
+                    new Estudiante(Integer.parseInt(req.queryParams("matricula")),
+                    req.queryParams("nombre"),
+                    req.queryParams("apellido"),
+                    req.queryParams("telefono")
+            ));
+            res.redirect("/");
+            return null;
+        });
+
+        get("/delete", (req, res) -> {
+            estudiantes.remove(getPorMatricula(req.queryParams("matricula")));
+            res.redirect("/");
+            return null;
+        });
 
         post("/delete/:matricula", (req, res) -> {
             estudiantes.remove(getPorMatricula(req.params("matricula")));
             res.redirect("/");
             return null;
         });
+
     }
 
 
@@ -66,5 +83,14 @@ public class Main {
                 filter(estudiante -> estudiante.getMatricula() == Integer.parseInt(matricula))
                 .findFirst()
                 .orElseThrow(NotFoundException::new);
+    }
+
+    public static void setPorMatricula(String matricula, Estudiante elemento) {
+        for (int i = 0; i < estudiantes.size(); i++) {
+            if (estudiantes.get(i).getMatricula() == Integer.parseInt(matricula)) {
+                estudiantes.set(i, elemento);
+            }
+        }
+        throw new NotFoundException();
     }
 }
