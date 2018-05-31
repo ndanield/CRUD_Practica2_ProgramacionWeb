@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec28e1f2-9f8c-4773-b7fc-2c8f81ef36be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/ce/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/ce/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/public.scripts/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public.scripts/script.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,8 +56,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/pucmm/ce/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+            <state relative-caret-position="984">
+              <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -586,14 +585,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public.scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRUD_Practica2_ProgramacionWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRUD_Practica2_ProgramacionWeb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -781,12 +772,12 @@
       <workItem from="1527605965566" duration="3274000" />
       <workItem from="1527706834475" duration="2719000" />
       <workItem from="1527727499340" duration="13157000" />
-      <workItem from="1527773647189" duration="11220000" />
+      <workItem from="1527773647189" duration="11529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56625000" />
+    <option name="totallyTimeSpent" value="56934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,7 +790,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="4" />
@@ -820,8 +810,8 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="12" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2305141" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.40298507" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.2305141" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" visible="true" weight="0.40298507" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.3283582" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
@@ -848,7 +838,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/pucmm/ce/Main.java</url>
-          <line>92</line>
+          <line>90</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
@@ -1226,8 +1216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/pucmm/ce/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        <state relative-caret-position="984">
+          <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
