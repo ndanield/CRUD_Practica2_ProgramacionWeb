@@ -4,22 +4,30 @@
     <h1>Editar el estudiante</h1>
 
     <form class="form" action="/update" method="post">
+
         <div class="form-group">
-            <label id="mat">Matricula:</label>
-            <input id="mat" type="number" value="{{ estudiante.matricula }}" class="form-control" name="matricula">
+            <label for="matricula" class="sr-only" >Matricula:</label>
+            <input id="matricula" class="form-control" type="number" placeholder="Matricula" name="matricula" value="{{ estudiante.matricula }}">
         </div>
-        <div class="form-group">
-            <label id="nom">Nombres:</label>
-            <input id="nom" type="text" value="{{ estudiante.nombre }}" class="form-control" name="nombre">
-        </div>
-        <div class="form-group">
-            <label id="ape">Apellidos:</label>
-            <input id="ape" type="text" value="{{ estudiante.apellido }}" class="form-control" name="apellido">
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="nombre" class="sr-only" >Nombres:</label>
+                    <input id="nombre" class="form-control" type="text" placeholder="Nombres" name="nombre" value="{{ estudiante.nombre }}">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="apellido" class="sr-only" >Apellidos:</label>
+                    <input id="apellido" class="form-control" type="text" placeholder="Apellidos" name="apellido" value="{{ estudiante.apellido }}">
+                </div>
+            </div>
         </div>
 
         <div class="form-group">
-            <label id="tel">Teléfonos</label>
-            <input id="tel" type="tel" value="{{ estudiante.telefono }}" class="form-control" name="telefono">
+            <label for="telefono" class="sr-only" >Teléfono:</label>
+            <input id="telefono" class="form-control" type="tel" placeholder="Teléfono" name="telefono" value="{{ estudiante.telefono }}">
         </div>
 
         <hr>
