@@ -3,7 +3,7 @@
 {{#partial "content"}}
     <h1>Editar el estudiante</h1>
 
-    <form class="form" action="/update/" method="post">
+    <form class="form" action="/update" method="post">
         <div class="form-group">
             <label id="mat">Matricula:</label>
             <input id="mat" type="number" value="{{ estudiante.matricula }}" class="form-control" name="matricula">
@@ -24,9 +24,9 @@
 
         <hr>
 
-        <button type="submit" class="btn mx-3"><i class="far fa-save"></i> Actualizar</button>
-        <a href="/delete">
-            <button type="submit" class="btn btn-danger mx-3"><i class="far fa-trash-alt"></i> Eliminar</button>
+        <button type="submit" class="btn mr-3"><i class="far fa-save"></i> Actualizar</button>
+        <a href="/delete/{{ estudiante.matricula }}">
+            <button type="button" class="btn btn-danger ml-3"><i class="far fa-trash-alt"></i> Eliminar</button>
         </a>
     </form>
 

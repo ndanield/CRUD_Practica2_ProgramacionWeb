@@ -27,7 +27,8 @@ public class Main {
         }, new HandlebarsTemplateEngine());
 
 
-        get("/create", (req, res) -> new ModelAndView(null, "create.hbs"));
+        get("/create", (req, res) -> new ModelAndView(null, "create.hbs"),
+                new HandlebarsTemplateEngine());
 
         post("/create", (req, res) -> {
             estudiantes.add(new Estudiante(Integer.parseInt(req.queryParams("matricula")),
@@ -63,8 +64,8 @@ public class Main {
             return null;
         });
 
-        get("/delete", (req, res) -> {
-            estudiantes.remove(getPorMatricula(req.queryParams("matricula")));
+        get("/delete/:matricula", (req, res) -> {
+            estudiantes.remove(getPorMatricula(req.params("matricula")));
             res.redirect("/");
             return null;
         });
@@ -89,6 +90,7 @@ public class Main {
         for (int i = 0; i < estudiantes.size(); i++) {
             if (estudiantes.get(i).getMatricula() == Integer.parseInt(matricula)) {
                 estudiantes.set(i, elemento);
+                return;
             }
         }
         throw new NotFoundException();
