@@ -1,0 +1,13 @@
+{{#partial "content"}}
+    <h1>Agregar nuevo estudiante</h1>
+
+    <form action="/create" method="post">
+        <input type="number" placeholder="Matricula" name="matricula">
+        <input type="text" placeholder="Nombres" name="nombre">
+        <input type="text" placeholder="Apellidos" name="apellido">
+        <input type="tel" placeholder="Teléfono" name="telefono">
+        <button type="submit">Agregar</button>
+    </form>
+{{/partial}}
+
+{{> home.hbs}}

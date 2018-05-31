@@ -1,48 +1,31 @@
 {{#partial "content"}}
     <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <h1 class="my-3">Lista de estudiantes</h1>
+        <h1 class="my-3">Lista de estudiantes</h1>
 
-                <button type="button" class="btn btn-primary my-3">Agregar estudiante</button>
+        <form action="/create" method="get">
+            <button type="submit" class="btn btn-primary my-3">Agregar estudiante</button>
+        </form>
 
-                <table class="table table-responsive table-stripped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Matricula</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {{#each estudiantes}}
-                        <tr>
-                            <th scope="row">{{ matricula }}</th>
-                            <td>{{ nombre }}</td>
-                            <td>{{ apellido }}</td>
-                            <td>{{ telefono }}</td>
-                            <td><button type="button" class="btn">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button></td>
-                        </tr>
-                    {{/each}}
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col">
-                <br>
-                <div class="card">
-                    <div class="card-header">
-                        Header
-                    </div>
-                    <div class="card-body">
-                        <p class="backnote">Aquí se muestran detalles del estudiante seleccionado</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <table class="table table-responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each estudiantes}}
+                <tr class='clickable-row' data-href='url://show'>
+                    <th scope="row">{{ matricula }}</th>
+                    <td>{{ nombre }}</td>
+                    <td>{{ apellido }}</td>
+                    <td>{{ telefono }}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
     </div>
 
 {{/partial}}

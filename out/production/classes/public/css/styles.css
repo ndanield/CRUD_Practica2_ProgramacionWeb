@@ -1,5 +1,10 @@
-.backnote {
-    font-family: "Microsoft Sans Serif";
-    font-size: 24px;
-    text-shadow: 0 0 4px gainsboro;
+.page {
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px 5px darkgray;
+    margin: 2% 10% auto 10%;
+}
+
+tbody tr:hover {
+    background-color: #ffa;
 }
