@@ -1,32 +1,40 @@
+{{#partial "control-panel"}}
+    <form action="/create" method="get">
+        <button class="btn btn-primary"><i class="far fa-user"></i> Agregar estudiante</button>
+    </form>
+{{/partial}}
+
 {{#partial "content"}}
-    <div class="container">
-        <h1 class="my-3">Lista de estudiantes</h1>
+    <h1>Lista de estudiantes</h1>
 
-        <form action="/create" method="get">
-            <button type="submit" class="btn btn-primary my-3">Agregar estudiante</button>
-        </form>
+    <hr>
 
-        <table class="table table-responsive">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Matricula</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Telefono</th>
-                </tr>
-            </thead>
-            <tbody>
-            {{#each estudiantes}}
-                <tr class='clickable-row' data-href='url://show'>
-                    <th scope="row">{{ matricula }}</th>
-                    <td>{{ nombre }}</td>
-                    <td>{{ apellido }}</td>
-                    <td>{{ telefono }}</td>
-                </tr>
-            {{/each}}
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th scope="col">Matricula</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each estudiantes}}
+            <tr>
+                <td>
+                    <form action="/show/{{ matricula }}" method="get">
+                        <button type="submit" class="btn btn-primary"><i class="far fa-eye"></i></button>
+                    </form>
+                </td>
+                <td>{{ matricula }}</td>
+                <td>{{ nombre }}</td>
+                <td>{{ apellido }}</td>
+                <td>{{ telefono }}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
 
 {{/partial}}
 

@@ -1,5 +1,7 @@
 package edu.pucmm.ce;
 
+import java.util.Objects;
+
 public class Estudiante {
 
     private int matricula;
@@ -46,4 +48,17 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Estudiante that = ( Estudiante ) o;
+        return matricula == that.matricula;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(matricula);
+    }
 }

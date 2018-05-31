@@ -1,16 +1,28 @@
+{{#partial "title"}}Datos del estudiante{{/partial}}
+
 {{#partial "content"}}
-    <div class="card">
-        <div class="card-header">
-            Fulano
-        </div>
-        <div class="card-body">
-            <p class="backnote">Aquí se muestran detalles del estudiante seleccionado</p>
-        </div>
-        <div class="card-footer">
-            <button type="button" class="btn">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-        </div>
+    <h1>Ficha del estudiante</h1>
+
+    <hr>
+
+    <p>Matricula: {{ estudiante.matricula }}</p>
+    <p>Nombres: {{ estudiante.nombre }}</p>
+    <p>Apellidos: {{ estudiante.apellido}}</p>
+    <p>Teléfono: {{ estudiante.telefono }}
+
+    <hr>
+
+    <div class="row">
+        <form class="px-3" action="/edit/{{ estudiante.matricula }}" method="get">
+            <button type="button" class="btn"><i class="far fa-edit"></i> Edit</button>
+        </form>
+
+        <form class="px-3" action="/detele/{{ estudiante.matricula }}" method="post">
+            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+        </form>
     </div>
+
+
 {{/partial}}
 
-{{> base.hbs }}
+{{> home.hbs }}

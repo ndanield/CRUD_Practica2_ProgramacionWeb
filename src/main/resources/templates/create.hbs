@@ -1,13 +1,36 @@
+{{#partial "title"}}Agregar estudiante{{/partial}}
+
 {{#partial "content"}}
     <h1>Agregar nuevo estudiante</h1>
-
+    <hr>
     <form action="/create" method="post">
-        <input type="number" placeholder="Matricula" name="matricula">
-        <input type="text" placeholder="Nombres" name="nombre">
-        <input type="text" placeholder="Apellidos" name="apellido">
-        <input type="tel" placeholder="Teléfono" name="telefono">
-        <button type="submit">Agregar</button>
+        <div class="form-group">
+            <label for="matricula" class="sr-only">Matricula:</label>
+            <input id="matricula" class="form-control" type="number" placeholder="Matricula" name="matricula">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="nombre" class="sr-only">Nombres:</label>
+                    <input id="nombre" class="form-control" type="text" placeholder="Nombres" name="nombre">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="apellido" class="sr-only">Apellidos:</label>
+                    <input id="apellido" class="form-control" type="text" placeholder="Apellidos" name="apellido">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono" class="sr-only">Teléfono:</label>
+            <input id="telefono" class="form-control" type="tel" placeholder="Teléfono" name="telefono">
+        </div>
+        <button class="btn btn-primiry" type="submit">Agregar</button>
     </form>
+
 {{/partial}}
 
 {{> home.hbs}}

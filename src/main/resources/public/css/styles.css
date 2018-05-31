@@ -1,10 +1,21 @@
 .page {
     border: 1px solid gray;
-    border-radius: 3px;
-    box-shadow: 0 2px 8px 5px darkgray;
-    margin: 2% 10% auto 10%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 9px darkgray;
+    margin: 10% 20% auto 20%;
+    padding: 20px 20px;
+}
+
+.panel {
+    border-radius: 2px;
+    margin: 0 2px;
+}
+
+.contenido {
+    width: 500px;
+    margin: 20px auto;
 }
 
 tbody tr:hover {
-    background-color: #ffa;
+    background-color: #ffa !important;
 }
